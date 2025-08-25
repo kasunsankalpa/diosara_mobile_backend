@@ -15,11 +15,13 @@ import { ConfigModule } from '@nestjs/config';
     TypeOrmModule.forRoot({
       //  isGlobal: true,
       type: 'mysql',
-      host: process.env.DATABASE_HOST,
-      port:parseInt(process.env.DATABASE_PORT,10) ,
-      username: 'root',
-      password:  'root',
-      database: 'billing_db',
+      // host: process.env.DATABASE_HOST,
+      host: 'localhost',
+      // port:parseInt(process.env.DATABASE_PORT,10) ,
+      port: 3306,
+      username: 'vbubjunp_vbuuser',
+      password: '5m0@W232lIQG',
+      database: 'vbubjunp_diosara',
       autoLoadEntities: true,
       synchronize: true, // disable in production
     }),
@@ -34,5 +36,5 @@ import { ConfigModule } from '@nestjs/config';
   providers: [AppService],
 })
 export class AppModule {
-  
+
 }
